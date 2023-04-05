@@ -1,0 +1,130 @@
+body,
+table.body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+td,
+th {
+    hyphens: none;
+}
+
+table, tr, td, th {
+  &[valign] {
+      vertical-align: unset;
+  }
+  &[valign="middle"] {
+      vertical-align: middle;
+  }
+  &[valign="bottom"] {
+      vertical-align: bottom;
+  }
+}
+
+.collapse > tbody > tr {
+    td.columns,
+    td.column,
+    th.columns,
+    th.column {
+        padding-bottom: 0;
+    }
+}
+
+.hide {
+    display: none;
+    mso-hide: all;
+    overflow: hidden;
+    max-height: 0;
+    font-size: 0;
+    width: 0;
+    line-height: 0;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-white {
+    color: $white;
+}
+.text-dark-gray {
+    color: $dark-gray;
+}
+.text-primary {
+    color: $primary-color;
+}
+.text-secondary {
+    color: $secondary-color;
+}
+.fw-bold {
+    font-weight: 700;
+}
+.ls-200 {
+    letter-spacing: .2em;
+}
+.fz-1 {
+    font-size: $h1-font-size;
+}
+.mb-0 {
+    margin-bottom: 0;
+    Margin-bottom: 0;
+}
+.pb-0 {
+    &,
+    &.callout-inner {
+        padding-bottom: 0;
+    }
+}
+
+.container.white {
+    background: $white;
+}
+
+// Collapse grid correction
+@for $i from 1 through $grid-column-count {
+    .collapse > tbody > tr {
+        td.large-#{$i}.first,
+        th.large-#{$i}.first,
+        td.large-#{$i}.last,
+        th.large-#{$i}.last {
+            width: -zf-grid-calc-px($i, $grid-column-count, $global-width) + $global-gutter;
+        }
+    }
+}
+
+
+// Horizontal line fix
+table {
+    &.hr,
+    &.h-line {
+        th {
+            border-bottom: none;
+            border-top: $hr-border;
+            padding-top: 0;;
+        }
+    }
+}
+
+// Footnote
+.footnote {
+    font-size: $footnote-font-size;
+}
+
+
+ul {
+    padding-left: 16px;
+    margin-top: 0;
+    margin-bottom: $paragraph-margin-bottom;
+    Margin-top: 0;
+    Margin-bottom: $paragraph-margin-bottom;
+    li {
+        list-style-image: url(/assets/img/bullet.png);
+    }
+}
