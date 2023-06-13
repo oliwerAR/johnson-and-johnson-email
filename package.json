@@ -1,8 +1,8 @@
 {
   "name": "johnson&johnson e-mails",
-  "version": "0.0.0",
-  "description": "Basic template for a Foundation for Emails project.",
-  "repository": "foundation/foundation-emails-template",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "oliwerAR/johnson-and-johnson-email",
   "main": "gulpfile.babel.js",
   "scripts": {
     "start": "gulp",
