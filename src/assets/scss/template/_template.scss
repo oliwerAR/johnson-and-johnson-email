@@ -128,3 +128,27 @@ ul {
         list-style-image: url(/assets/img/bullet.png);
     }
 }
+
+.text-gray {
+    color: #999999;
+}
+
+.fs-1 {
+    font-size: 32px;
+}
+
+.fs-5 {
+    font-size: 12px;
+}
+
+.h2 {
+    font-size: $h2-font-size;
+}
+
+.border-dotted-left {
+    border-left: dotted 2px #178179;
+}
+
+.bg-gray {
+    background-color: #707070;
+}
