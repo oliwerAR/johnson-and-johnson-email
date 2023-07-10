@@ -1,0 +1,79 @@
+// Type basics
+.fw-bold {
+    font-weight: 700;
+}
+.fw-black {
+    font-weight: 900;
+}
+.ls-200 {
+    letter-spacing: .2em;
+}
+
+@each $key, $val in (
+    1:  $h1-font-size,
+    2:  $h2-font-size,
+    3:  $h3-font-size,
+    4:  $h4-font-size,
+    5:  $h5-font-size,
+    6:  $h6-font-size,
+) {
+    .fs-#{$key} {
+        font-size: $val;
+    }
+}
+
+
+@each $key, $val in $display-font-sizes {
+    .ds-#{$key} {
+        font-size: $val;
+    }
+}
+
+@each $key, $val in $line-heights {
+    .lh-#{$key} {
+        line-height: $val;
+    }
+}
+
+// Text styling
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-underline {
+    text-decoration: underline;
+}
+.text-nowrap {
+    white-space: nowrap;
+}
+
+
+// Color
+.text-white {
+    color: $white;
+}
+.text-dark-gray {
+    color: $dark-gray;
+}
+.text-primary {
+    color: $primary-color;
+}
+.text-secondary {
+    color: $secondary-color;
+}
+
+// List
+ul {
+    padding-left: 16px;
+    margin-top: 0;
+    margin-bottom: $paragraph-margin-bottom;
+    Margin-top: 0;
+    Margin-bottom: $paragraph-margin-bottom;
+    li {
+        list-style-image: url(/assets/img/bullet.png);
+    }
+}
+
+// Footnote
+.footnote {
+    font-size: $footnote-font-size;
+}
